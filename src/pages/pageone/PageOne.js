@@ -1,6 +1,6 @@
 import React from 'react';
 import SHOP_DATA from './SHOP_DATA';
-import PreviewCollection from '../preview_collection/PreviewCollection';
+import PreviewCollection from '../../components/preview_collection/PreviewCollection';
   
 
 class PageOne extends React.Component {
@@ -12,7 +12,7 @@ class PageOne extends React.Component {
     }
   }
   render() {
-    const {collections} = this.state;
+    const { collections } = this.state;
     return(
       <div className='shop-page'>
         {
