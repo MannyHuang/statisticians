@@ -1,5 +1,4 @@
 import React from 'react';
-import SHOP_DATA from './SHOP_DATA';
 import PreviewCollection from '../../components/preview_collection/PreviewCollection';
   
 
@@ -8,7 +7,7 @@ class PageOne extends React.Component {
     super();
 
     this.state = {
-      collections: SHOP_DATA
+      collections: ''
     }
   }
   render() {
