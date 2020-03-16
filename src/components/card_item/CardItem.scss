@@ -35,7 +35,7 @@
   }
 
   .image {
-    width: 300px;
+    width: 150px;
     height: 300px;
     position: absolute;
     left: 200px;;
@@ -66,6 +66,7 @@
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+      align-items: initial;
     }
   }
 }

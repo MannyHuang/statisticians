@@ -1,19 +1,15 @@
-.card-header {
+.item-header {
   width: 22%;
   display: flex;
-  flex-direction: column;
   height: 350px;
   align-items: center;
 
   .image {
-    width: 100%;
-    height: 95%;
-    background-size: cover;
-    background-position: center;
+    height:50%;
     margin-bottom: 5px;
   }
 
-  .card-footer {
+  .item-footer {
     width: 100%;
     height: 5%;
     display: flex;

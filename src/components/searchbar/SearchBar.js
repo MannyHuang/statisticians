@@ -1,10 +1,12 @@
 import React from 'react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faSearchEngin } from '@fortawesome/free-solid-svg-icons'
 import './SearchBar.scss';
 
 const SearchBar = (props) => {
   return (
     <form>
-      <i className="fab fa-searchengin"></i>
+      {/* <FontAwesomeIcon icon={faSearchEngin} />  */}
       <input 
         className='search-bar'
         type='search'
@@ -16,3 +18,5 @@ const SearchBar = (props) => {
 } 
 
 export default SearchBar;
+
+ 

@@ -1,10 +1,10 @@
-import React from 'react';
+import React , { Component } from 'react';
 import './HomePage.scss';
 import CardList from '../../components/cardlist/CardList';
 import SearchBar from '../../components/searchbar/SearchBar';
 import { data } from '../../assets/data';
 
-class HomePage extends React.Component {
+class HomePage extends Component {
   constructor(props) {
     super(props);
 
@@ -15,10 +15,12 @@ class HomePage extends React.Component {
    };
   }
 
-  onSearchChange = event => {
+  onSearchChange = (event) => {
     console.log(event.target.value)
     this.setState({ searchField: event.target.value });
   };
+
+  debouncedField = content => console.log(content);
 
   // onFormSubmit = event => {
   //   event.preventDefault();

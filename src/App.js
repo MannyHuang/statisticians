@@ -1,11 +1,11 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import HomePage from './pages/homepage/HomPage';
-import './App.css';
-import PageOne from './pages/pageone/PageOne';
-import Header from './components/header/header';
-import SignInAndSignUP from './pages/pageone/sign_in_and_sign_out/SignInAndSignUp';
-import { auth } from './components/firebase/FirebaseUtils';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import HomePage from "./homepage/homepage/HomPage";
+import "./App.css";
+import Header from "./components/header/header";
+import SignIn from "./components/sign_in/SignIn";
+import { auth } from "./components/firebase/FirebaseUtils";
+import ProfileDetail from "./components/ProfileDetail/ProfileDetail";
 
 class App extends React.Component {
   constructor() {
@@ -13,31 +13,31 @@ class App extends React.Component {
 
     this.state = {
       currentUser: null
-    }
+    };
   }
 
-  unsubscribeFormAuth = null
+  unsubscribeFormAuth = null;
 
   componentDidMount() {
     this.unsubscribeFormAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user })
-    })
+      this.setState({ currentUser: user });
+    });
   }
 
   componentWillUnmount() {
     this.unsubscribeFormAuth();
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Header />
         <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/pageone' component={PageOne} />
-          {/* <Route path='/pagetwo' component={PageTwo} /> */}
-          <Route path='/signin' component={SignInAndSignUP} />
-        </Switch> 
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/people" component={HomePage} />
+          <Route path="/people/:id" component={ProfileDetail} />
+          <Route path="/signin" component={SignIn} />
+        </Switch>
       </div>
     );
   }
