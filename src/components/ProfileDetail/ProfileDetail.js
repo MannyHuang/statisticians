@@ -1,7 +1,6 @@
 import React from "react";
 import "./collectionOverview.scss";
 import { connect } from "react-redux";
-// import { persons } from '../../actions';
 
 const ProfileDetail = props => {
   const { match: {params} = {}, persons} = props;
@@ -11,11 +10,15 @@ const ProfileDetail = props => {
   const { name, imgUrl, profile } = profileData;
 
   return (
-    <div className="iitem-header">
-      <img className="image" src={imgUrl} alt={name} />
-      <div className="item-footer">
-        <span className="name">{name}</span>
-        <span className="profile">{profile}</span>
+    <div className="profile-container">
+      <h1>{name}</h1>
+      <div className="content">
+        <div className="left-container">
+          <img className="image" src={imgUrl} alt={name} />
+        </div>        
+        <div className="right-container">
+          <p>{profile}</p>
+        </div>
       </div>
     </div>
   );

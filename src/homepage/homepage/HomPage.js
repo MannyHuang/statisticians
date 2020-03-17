@@ -28,7 +28,9 @@ class HomePage extends Component {
     return (
       <div className="homepage">
         <SearchBar searchValue={searchField} onSearchChange={this.onSearchChange} />
-        <CardList persons={filteredPersons} />
+        <div className="content-container">
+          <CardList persons={filteredPersons} />  
+        </div>
       </div>
     );
   }

@@ -9,7 +9,9 @@ const CardItem = (props) => {
   const { name, achivement, imgUrl, history, id, research } = props;
   return (
     <div className='card-item' onClick={() => history.push(`/people/${id}`)}>
-      <img className='image' alt={name} src={imgUrl} />
+      <div className='image-container'>
+        <img alt={name} src={imgUrl} />
+      </div>
       <div className='content'>
         <h1 className='title'>{name}</h1>
         <span className='subtitle'>Achivement: {achivement}</span>

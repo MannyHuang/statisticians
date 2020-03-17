@@ -6,9 +6,12 @@
   margin-bottom: 25px;
 
   .logo-container {
+    margin-top: 10px;
     height: 100%;
-    width: 70px;
-    padding: 25px;
+    h1 {
+      display: inline;
+      margin-left: 10px;
+    }
   }
 
   .options {

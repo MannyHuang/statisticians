@@ -6,8 +6,11 @@ import './header.scss';
 
 const Header = ({ currentUser }) => (
   <div className='header'>
-    <Link className='logo-container' to='/'>
-      <Logo className='logo' />
+    <Link  to='/'>
+      <span className='logo-container'>
+        <Logo className='logo' />
+        <h1>The Statisticians</h1>
+      </span>
     </Link>
     <div className='options'>
       <Link className='option' to='/'>
