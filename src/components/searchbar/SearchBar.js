@@ -11,8 +11,9 @@ const SearchBar = (props) => {
         className='search-bar'
         type='search'
         placeholder='search name'
+        value={props.searchValue}
         onChange={props.onSearchChange}
-        />
+      />
     </form>
   );
 } 

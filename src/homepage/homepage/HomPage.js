@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import "./HomePage.scss";
 import CardList from "../../components/cardlist/CardList";
 import SearchBar from "../../components/searchbar/SearchBar";
@@ -9,35 +11,31 @@ class HomePage extends Component {
 
     this.state = {
       searchField: "",
-      persons: [],
       selectedPerson: null
     };
   }
 
   onSearchChange = event => {
-    console.log(event.target.value);
     this.setState({ searchField: event.target.value });
   };
 
-  debouncedField = content => console.log(content);
-
-  // onFormSubmit = event => {
-  //   event.preventDefault();
-  //   this.setState({ searchField: event})
-  // }
-
   render() {
-    const { persons, searchField } = this.state;
+    const { searchField } = this.state;
+    const { persons } = this.props;
     const filteredPersons = persons.filter(person =>
       person.name.toLowerCase().includes(searchField.toLowerCase())
     );
     return (
       <div className="homepage">
-        <SearchBar onSearchChange={this.onSearchChange} />
+        <SearchBar searchValue={searchField} onSearchChange={this.onSearchChange} />
         <CardList persons={filteredPersons} />
       </div>
     );
   }
 }
 
-export default HomePage;
+const mapStateToProps = state => ({ 
+  persons: state.persons
+});
+
+export default connect(mapStateToProps)(HomePage);
