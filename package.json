@@ -1,8 +1,8 @@
 {
-  "name": "mz_clothing",
+  "name": "statisticians",
   "version": "0.1.0",
-  "homepage": "http://mannyhuang.github.io/statisticians",
-  "private": true,
+  "homepage": "https://mannyhuang.github.io/statisticians",
+  "private": false,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
