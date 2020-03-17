@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/statisticians/static/css/main.025803db.chunk.css",
-    "main.js": "/statisticians/static/js/main.87e6ca61.chunk.js",
-    "main.js.map": "/statisticians/static/js/main.87e6ca61.chunk.js.map",
+    "main.js": "/statisticians/static/js/main.db27aaa9.chunk.js",
+    "main.js.map": "/statisticians/static/js/main.db27aaa9.chunk.js.map",
     "runtime-main.js": "/statisticians/static/js/runtime-main.4956015b.js",
     "runtime-main.js.map": "/statisticians/static/js/runtime-main.4956015b.js.map",
     "static/js/2.191dbb87.chunk.js": "/statisticians/static/js/2.191dbb87.chunk.js",
     "static/js/2.191dbb87.chunk.js.map": "/statisticians/static/js/2.191dbb87.chunk.js.map",
     "index.html": "/statisticians/index.html",
-    "precache-manifest.4b0668b0f6fb887f0ce840610f76a7ad.js": "/statisticians/precache-manifest.4b0668b0f6fb887f0ce840610f76a7ad.js",
+    "precache-manifest.a0e532076eb1db9cd9a6062d2d46db40.js": "/statisticians/precache-manifest.a0e532076eb1db9cd9a6062d2d46db40.js",
     "service-worker.js": "/statisticians/service-worker.js",
     "static/css/main.025803db.chunk.css.map": "/statisticians/static/css/main.025803db.chunk.css.map",
     "static/js/2.191dbb87.chunk.js.LICENSE.txt": "/statisticians/static/js/2.191dbb87.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.4956015b.js",
     "static/js/2.191dbb87.chunk.js",
     "static/css/main.025803db.chunk.css",
-    "static/js/main.87e6ca61.chunk.js"
+    "static/js/main.db27aaa9.chunk.js"
   ]
 }
