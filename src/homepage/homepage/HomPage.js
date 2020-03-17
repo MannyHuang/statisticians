@@ -1,22 +1,21 @@
-import React , { Component } from 'react';
-import './HomePage.scss';
-import CardList from '../../components/cardlist/CardList';
-import SearchBar from '../../components/searchbar/SearchBar';
-import { data } from '../../assets/data';
+import React, { Component } from "react";
+import "./HomePage.scss";
+import CardList from "../../components/cardlist/CardList";
+import SearchBar from "../../components/searchbar/SearchBar";
 
 class HomePage extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
-      searchField: '',
-      persons: data,
-      selectedPerson: null,
-   };
+    this.state = {
+      searchField: "",
+      persons: [],
+      selectedPerson: null
+    };
   }
 
-  onSearchChange = (event) => {
-    console.log(event.target.value)
+  onSearchChange = event => {
+    console.log(event.target.value);
     this.setState({ searchField: event.target.value });
   };
 
@@ -33,11 +32,11 @@ class HomePage extends Component {
       person.name.toLowerCase().includes(searchField.toLowerCase())
     );
     return (
-      <div className='homepage'>
-        <SearchBar onSearchChange={this.onSearchChange}/>
+      <div className="homepage">
+        <SearchBar onSearchChange={this.onSearchChange} />
         <CardList persons={filteredPersons} />
       </div>
-    )
+    );
   }
 }
 

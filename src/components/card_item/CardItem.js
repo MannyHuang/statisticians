@@ -1,6 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './CardItem.scss';
+import { selectPerson } from '../../actions';
+import { connect } from 'react-redux';
+
 
 const CardItem = (props) => {
   const { name, achivement, imgUrl, history, id, research } = props;
@@ -16,4 +19,11 @@ const CardItem = (props) => {
     ); 
 }
 
-export default withRouter(CardItem);
+const mapStateToProps = state => {
+  return { persons: state.persons };
+};
+
+export default connect(
+  mapStateToProps,
+  { selectPerson }
+)(withRouter(CardItem));
